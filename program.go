@@ -37,4 +37,21 @@ func main() {
 	fmt.Println("Temperature:", temperature)
 	fmt.Println("Is Raining:", isRaining)
 
+	//05_Arrays
+
+	// Fixed array size
+	var farr = [5]int{}
+	farr[0] = 10
+	farr[1] = 20
+	farr[2] = 30
+	farr[3] = 40
+	farr[4] = 50
+	fmt.Println("\nArray elements:", farr)
+	//array with initial values
+	var iarr = [3]string{"Go", "Python", "Java"}
+	fmt.Println("Programming Languages:", iarr)
+	//array with inferred size
+	var carr = [...]int{1, 2, 3, 4, 5}
+	fmt.Println("inferred array:", carr)
+
 }
