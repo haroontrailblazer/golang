@@ -107,4 +107,12 @@ func main() {
 	fmt.Println("\nslice:", slice)
 	fmt.Println("slc:", slc)
 
+	//slicing
+	subset := slc[0:2]
+	fmt.Println("Sliced Elements:", subset)
+
+	//Length & Capacity of a slice
+	fmt.Println("Length: ",len(slc))
+	fmt.Println("Capacity: ",cap(slc))
+
 }
