@@ -92,4 +92,19 @@ func main() {
 
 	//length of array
 	fmt.Println("\nLength of matrix:", len(matrix))
+
+	//06 Creating a slice
+	//using a literal
+	slice := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	//using Make
+	slc := make([]int, 5)
+	slc[0] = 10
+	slc[1] = 20
+	slc[2] = 30
+	slc[3] = 40
+	slc[4] = 50
+
+	fmt.Println("\nslice:", slice)
+	fmt.Println("slc:", slc)
+
 }
