@@ -54,4 +54,42 @@ func main() {
 	var carr = [...]int{1, 2, 3, 4, 5}
 	fmt.Println("inferred array:", carr)
 
+	//Accessing array elements
+	fmt.Println("\nFirst element of farr:", farr[0])
+	// Access last element using len(farr)-1
+	fmt.Println("Last element:", farr[len(farr)-1]) // No negative indexing in Go
+	// Modifying array elements
+	fmt.Println("\nOriginal farr:", farr)
+	farr[2] = 35
+	fmt.Println("Modified farr:", farr)
+
+	//Iterating Over an array
+	for i, v := range farr {
+		fmt.Println("\nElement at index", i, "is", v)
+	}
+
+	//Array methods & properties
+	fmt.Println("\nLength of iarr:", len(iarr))
+
+	// Comparing arrays
+	fmt.Println("Are farr and carr equal?", farr == carr) // false
+
+	//Multi-dimensional arrays (type 1)
+	var matrix [3][3]int
+	matrix[0][0] = 1
+	matrix[0][1] = 2
+	matrix[0][2] = 3
+	fmt.Println("\n3D Array (Matrix) Type 1:", matrix)
+
+	//type 2
+	var mat = [3][3]int{
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+	}
+
+	fmt.Println("3D Array (Matrix) Type 2:", mat)
+
+	//length of array
+	fmt.Println("\nLength of matrix:", len(matrix))
 }
