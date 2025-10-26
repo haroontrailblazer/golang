@@ -112,7 +112,32 @@ func main() {
 	fmt.Println("Sliced Elements:", subset)
 
 	//Length & Capacity of a slice
-	fmt.Println("Length: ",len(slc))
-	fmt.Println("Capacity: ",cap(slc))
+	fmt.Println("Length: ", len(slc))
+	fmt.Println("Capacity: ", cap(slc))
+
+	//07 Conditions in go
+	/*if Condition {
+
+	}*/
+
+	//if-else Condition
+	if num := int(10); num > 0 {
+		fmt.Println("\nNumber is non-zero:", num)
+	} else {
+		fmt.Println("Number is zero")
+	}
+
+	//if-else if-else Condition
+	score, err := fmt.Scanf("Enter your Exam Score: ")
+	if err != nil {
+		fmt.Println("Invalid input")
+		return
+	} else if score >= 90 {
+		fmt.Println("Grade: A")
+	} else if score >= 60 {
+		fmt.Println("Grade: B")
+	} else {
+		fmt.Println("Grade: C")
+	}
 
 }
