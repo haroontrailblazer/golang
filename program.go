@@ -128,8 +128,8 @@ func main() {
 	}
 
 	//if-else if-else Condition
-	score, err := fmt.Scanf("Enter your Exam Score: ")
-	if err != nil {
+	score := int(85)
+	if score != 100 && score < 0 {
 		fmt.Println("Invalid input")
 		return
 	} else if score >= 90 {
@@ -151,6 +151,47 @@ func main() {
 		fmt.Println("It's Friday, almost weekend!")
 	default:
 		fmt.Println("It's just another day.")
+
+	}
+
+	//loops in go
+	//for loop is the only looping available in go
+
+	/*
+
+			for statement1; statement2; statement3 {
+			     code block
+
+		    statement1: initialization of loop counter
+			statement2: condition to be checked before each iteration
+			statement3: increment/decrement of loop counter
+
+			} */
+	var x []int
+	x = append(x, 20, 30, 40, 50)
+	for index, value := range x {
+
+		fmt.Println("\nIndex:", index, "Value:", value)
+
+	}
+
+	y := map[string]int{
+		"apple":  5,
+		"banana": 10,
+		"cherry": 15,
+	}
+
+	for key, value := range y {
+
+		fmt.Println("Key:", key, "Value:", value)
+
+	}
+
+	z := "hello"
+
+	for index, Letter := range z {
+
+		fmt.Println("Index:", index, "Letter:", string(Letter))
 
 	}
 
