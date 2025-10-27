@@ -140,4 +140,18 @@ func main() {
 		fmt.Println("Grade: C")
 	}
 
+	//08 Switch Case
+
+	day := "monday"
+	switch day {
+
+	case "monday":
+		fmt.Println("\nIt's Monday, start of the week!")
+	case "friday":
+		fmt.Println("It's Friday, almost weekend!")
+	default:
+		fmt.Println("It's just another day.")
+
+	}
+
 }
