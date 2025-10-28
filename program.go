@@ -154,19 +154,20 @@ func main() {
 
 	}
 
-	//loops in go
+	//08 loops in go
 	//for loop is the only looping available in go
 
 	/*
 
-			for statement1; statement2; statement3 {
-			     code block
+					for statement1; statement2; statement3 {
+					     code block
 
-		    statement1: initialization of loop counter
-			statement2: condition to be checked before each iteration
-			statement3: increment/decrement of loop counter
 
-			} */
+		}	    statement1: initialization of loop counter
+					statement2: condition to be checked before each iteration
+					statement3: increment/decrement of loop counter
+
+					} */
 	var x []int
 	x = append(x, 20, 30, 40, 50)
 	for index, value := range x {
@@ -189,10 +190,39 @@ func main() {
 
 	z := "hello"
 
-	for index, Letter := range z {
+	for _, Letter := range z {
 
-		fmt.Println("Index:", index, "Letter:", string(Letter))
+		fmt.Println("Letter:", string(Letter))
 
 	}
 
+	fmt.Println("\nSum of 10 and 20 is:", add(10, 20))
+
+	z, b := swap("hello", "world")
+	fmt.Println("Swapped values:", z, b)
+
+	// Anonymous function
+	multiply := func(a, b int) int {
+		return a * b
+	}
+
+	fmt.Println("Multiplication of 5 and 6 is:", multiply(5, 6))
+
+}
+
+//09 Functions in go
+
+/*syntax:
+
+  func functionname() {
+      //code block
+  }
+
+*/
+
+func add(a, b int) int {
+	return a + b
+}
+func swap(z, b string) (string, string) {
+	return b, z
 }
