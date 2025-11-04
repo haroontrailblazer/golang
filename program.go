@@ -170,10 +170,9 @@ func main() {
 					} */
 	var x []int
 	x = append(x, 20, 30, 40, 50)
+
 	for index, value := range x {
-
 		fmt.Println("\nIndex:", index, "Value:", value)
-
 	}
 
 	y := map[string]int{
@@ -208,6 +207,23 @@ func main() {
 
 	fmt.Println("Multiplication of 5 and 6 is:", multiply(5, 6))
 
+	nnn := []int{1, 4, 6, 89}
+	fmt.Println(sum(nnn...))
+
+	//Anonymous Function means assign a function to a variable inside a main function
+	add2 := func(a, b int) int {
+		return a + b
+	}
+	println(add2)
+
+	nextseq := inseqe()
+	fmt.Println(nextseq())
+	fmt.Println(nextseq())
+	fmt.Println(nextseq())
+
+	defer second()
+	first()
+
 }
 
 //09 Functions in go
@@ -223,6 +239,33 @@ func main() {
 func add(a, b int) int {
 	return a + b
 }
+
 func swap(z, b string) (string, string) {
 	return b, z
+}
+
+// Variadic Function
+func sum(nnn ...int) int {
+	total := 0
+	for _, num := range nnn {
+		total += num
+	}
+	return total
+}
+
+//clouser function
+func inseqe() func() int {
+	i := 0 // initiate i with 0 after each time calling i has save its value
+	return func() int {
+		i++      // increment
+		return i //returning i
+	}
+}
+
+//defer function creation
+func first() {
+	fmt.Println("First")
+}
+func second() {
+	fmt.Println("second")
 }
