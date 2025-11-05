@@ -224,6 +224,10 @@ func main() {
 	defer second()
 	first()
 
+	fmt.Println("sarting program")
+	riskyfunction()
+	fmt.Println("this line will not be executed")
+
 }
 
 //09 Functions in go
@@ -268,4 +272,15 @@ func first() {
 }
 func second() {
 	fmt.Println("second")
+}
+
+// Panic in go
+func cleanup() {
+	fmt.Println("Clean up before Exiting")
+}
+
+func riskyfunction() {
+	defer cleanup()
+	fmt.Println("About to Panic")
+	panic("A serious issue occured")
 }
